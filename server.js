@@ -6,11 +6,23 @@ const dotenv = require('dotenv');
 const connectDB = require("./config/db");
 
 
+// var path = require("path");
+// var url = require("url");
+
+// var __filename = url.fileURLToPath(import.meta.url);
+// var __dirname = path.dirname(__filename);
+
 var path = require("path");
 var url = require("url");
 
-var __filename = url.fileURLToPath(import.meta.url);
-var __dirname = path.dirname(__filename);
+// Get the current script file's absolute path
+var __filename = process.argv[1];
+
+// Convert the file URL to a file path
+var filePath = url.parse("file://" + __filename).pathname;
+
+// Resolve the directory name from the file path
+var __dirname = path.dirname(filePath);
 
 //env config
 dotenv.config();
