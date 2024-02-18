@@ -1,0 +1,18 @@
+learn redux toolkit (as context api)
+used mui for frontend
+axios for api 
+npm i concurrently
+useEffect
+elastic search
+
+client cmd = npm run build
+
+
+
+
+
+
+
+
+
+
